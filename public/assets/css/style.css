@@ -1,0 +1,216 @@
+.navbar-fixed {position: absolute;z-index:900;}
+
+/* alert card */
+  #card-alert .card-content {
+    padding: 10px 20px;
+  }
+  
+  #card-alert i {
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+  }
+  
+  #card-alert .alert-circle {
+    display: inline-block;
+    width: 40px;
+    white-space: nowrap;
+    border-radius: 1000px;
+    vertical-align: bottom;
+    position: relative;
+    top: -5px;
+    left: -2px;
+  }
+  
+  #card-alert .single-alert {
+    line-height: 42px;
+  }
+  
+  #card-alert button {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  #card-alert .card .card-content {
+    padding: 20px 40px 20px 20px;
+  }
+  
+  #card-alert .card-action i {
+    top: 0;
+    margin: 0;
+  }
+
+/* Vertical Tabs */
+  .tabs-vertical .tabs {
+    height: auto;
+    display: -webkit-flex;
+    display: -flex;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column; }
+  .tabs-vertical .tab {
+    width: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: block;
+    float: left;
+    text-align: left;
+    line-height: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    text-overflow: ellipsis; }
+    .tabs-vertical .tab .active {
+      -moz-transition: border-color .5s ease;
+      -o-transition: border-color .5s ease;
+      -webkit-transition: border-color .5s ease;
+      transition: border-color .5s ease;
+      border-right: 3px solid #7283ce;
+      color: #2f32cc; }
+    .tabs-vertical .tab a {
+      color: #3f41b5;
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      -webkit-transition: color 0.28s ease;
+      -moz-transition: color 0.28s ease;
+      -o-transition: color 0.28s ease;
+      -ms-transition: color 0.28s ease;
+      transition: color 0.28s ease; }
+      .tabs-vertical .tab a:hover {
+        color: #8591d5; }
+    .tabs-vertical .tab.disabled a {
+      color: #8591d5;
+      cursor: default; }
+      .tabs-vertical .tab a.active {
+        color: #4d66f5;
+        background-color: rgba(128, 128,128,0.1);
+        cursor: default; }
+  .tabs-vertical .indicator {
+    display: none; }
+
+  .front{
+    z-index: 10000;
+  }
+  .overlay {
+      width:100%;
+      height:100%;
+      background-color:rgba(0,0,0,0.3);
+      position:absolute;
+      top:0;
+      left:0;
+      display:none;
+  }
+.slider img {
+    background-attachment: fixed;
+}
+.buttons-wrapper {
+  position: absolute;
+  height: calc(100vh);
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 997;
+  top: 0;
+  pointer-events: none;
+  width: 100%;
+}
+.buttons-wrapper a {
+  pointer-events: auto;
+}
+.mg-rg {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-top: -10.5rem;
+}
+.col .box {
+    display: block;
+    font-size: 20pt;
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.header {
+    font-weight: 500;
+    text-align: center;
+}
+.sub-header{
+    font-weight: 200;
+    text-align: center;
+}
+
+.extra {
+    font-size: 10rem
+}
+
+.card-icon .extra {
+  font-size: 8rem
+}
+.flow {
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 30px;
+}
+.pin-top {
+    position: relative;
+  }
+.pin-bottom {
+    position: relative;
+  }
+.pinned {
+    position: fixed !important;
+  }
+
+nav .nav-right {
+    padding-right: 20px
+}
+
+.breadcrumb {
+  margin: 10px;
+  font-size: 14px
+}
+
+.en-container {
+  width: 98%
+}
+.card-icon {
+  max-width: 50%;
+  max-height: 100%
+}
+.card-info {
+  padding: 0 24px !important;
+}
+
+.no-margin{
+  margin: 0;
+}
+.no-padding {
+  padding: 0;
+}
+
+.display th {
+  cursor: pointer !important;
+}
+
+@media only screen and (max-width: 992px) {
+  .mg-rg {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+  }
+}

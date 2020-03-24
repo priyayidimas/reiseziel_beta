@@ -1,0 +1,94 @@
+@if (isset($data))
+              <table class="bordered data display" id="table_id">
+                <thead>
+                  <tr style="center">
+                    <th>NO</th>
+                    <th>DESCRIPTION</th>
+                    <th>ACTION</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  @php
+                    $n = 1
+                  @endphp
+                 @foreach ($data as $row)
+                    <tr>
+                      <td>{{$n++}}</td>
+                      <td>{{$row->description}}</td>
+                      <td>
+                          <button class="col s6 m6 l6 btn btn-small yellow darken-2 waves-effect waves-light" onclick="location.href= '{{URL::to('/edit/'.$row->id)}}'"><i class="material-icons">edit</i></button>
+                          <button class="col s6 m6 l6 btn btn-small red darken-2 waves-effect waves-light" onclick="delfunc()"><i class="material-icons">delete</i></button>
+                      </td>
+                    </tr>
+                  @endforeach
+                </tbody>
+              </table>
+              @endif
+
+
+                         {{--  <li class="no-padding">
+             <ul class="collapsible collapsible-accordion">
+               <li>
+                 <a class="collapsible-header hoverable waves-effect"><i class="material-icons">people</i>Mitra PKBL</a>
+                 <div class="collapsible-body">
+                   <ul>
+                    <li><a href="{{URL::to('/addmitra')}}" class="waves-effect hoverable"> <i class="material-icons left">add</i>Tambah Data Mitra</a></li>
+                    <li><a href="{{URL::to('/mitra')}}" class="waves-effect hoverable"> <i class="material-icons left">insert_chart</i>Data Mitra</a></li>
+                    <li><a href="#!" class="waves-effect hoverable"> <i class="material-icons left">insert_chart</i>Kartu Piutang</a></li>
+                     <li><a href="#!" class="waves-effect hoverable">Third</a></li>
+                   </ul>
+                 </div>
+               </li>
+             </ul>
+           </li>  --}}
+
+           <div class="row en-container">
+          This is A <br>
+          @php
+              $date = "2018-03-12 16:06:30";
+              $carboned = Carbon::parse($date)->format('d/m/Y H:i:s');
+              $user = DB::table('users')->where('id','=','2')->first();
+          @endphp
+          {{$date}} <br>
+          {{$carboned}} <br><br>
+          {{$user->updated_at}} <br>
+          {{$user->created_at}} <br><br>
+          {{Carbon::parse($user->updated_at)->format('d/m/Y H:i:s')}} <br>
+          {{Carbon::parse($user->created_at)->format('d/m/Y H:i:s')}}
+
+
+        </div>
+
+
+        $( function() {
+  $( "#datepicker" ).datepicker({
+    altField: '#alt',
+    altFormat: 'yy-mm-dd'
+  });
+
+    $('#datetime').flatpickr({
+    enableTime: true,
+    altInput: true,
+    altFormat: "d/m/Y H:i:S",
+    dateFormat: "Y-m-d H:i:S",
+    minDate: "today",
+    time_24hr: true
+  });
+} );
+
+          @php
+              $a = explode(':','06:30');
+          @endphp
+        <p>{{$a[0]}}</p>
+        <p>{{$a[1]}}</p>
+        <p>{{Carbon::now(8)->addHour($a[0])->addMinutes($a[1])}}</p>
+        </div>
+        <button type="button" onclick="ba()">Tbaa</button>
+
+          $('#time').flatpickr({
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "H:i",
+    time_24hr: true
+  });
